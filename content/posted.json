@@ -7,7 +7,15 @@
       "pillar": "commitment",
       "type": "reflection",
       "source_file": "posts-2026-02-21.json"
+    },
+    {
+      "id": "002",
+      "posted_date": "2026-02-22T14:23:47.718945+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mfhdnkr4sy2h",
+      "pillar": "responsibility",
+      "type": "quote",
+      "source_file": "posts-2026-02-21.json"
     }
   ],
-  "total_posted": 1
+  "total_posted": 2
 }
