@@ -1,4 +1,13 @@
 {
-  "log": [],
-  "total_posted": 0
+  "log": [
+    {
+      "id": "001",
+      "posted_date": "2026-02-22T00:36:03.867098+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mffvfhnb2h2v",
+      "pillar": "commitment",
+      "type": "reflection",
+      "source_file": "posts-2026-02-21.json"
+    }
+  ],
+  "total_posted": 1
 }
