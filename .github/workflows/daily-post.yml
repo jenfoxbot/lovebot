@@ -1,0 +1,49 @@
+name: Daily Love Post
+
+on:
+  schedule:
+    # Runs at 6:00 AM PST (14:00 UTC) every day
+    # Note: During PDT (daylight saving), this will be 7:00 AM local time
+    - cron: '0 14 * * *'
+  
+  # Allows manual trigger for testing
+  workflow_dispatch:
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    
+    # Set permissions for the workflow
+    permissions:
+      contents: write  # Needed to commit posted.json updates
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Use a token with write permissions
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'  # Cache pip dependencies
+      
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      
+      - name: Post to Bluesky
+        env:
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+        run: python src/post.py
+      
+      - name: Commit posted.json update
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add content/posted.json
+          # Only commit if there are changes
+          git diff --staged --quiet || git commit -m "📝 Update posted.json after daily post [skip ci]"
+          git push
