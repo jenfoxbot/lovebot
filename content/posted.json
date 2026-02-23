@@ -15,7 +15,15 @@
       "pillar": "responsibility",
       "type": "quote",
       "source_file": "posts-2026-02-21.json"
+    },
+    {
+      "id": "003",
+      "posted_date": "2026-02-23T14:43:32.562235+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mfjv7s75jl2x",
+      "pillar": "self-love",
+      "type": "reflection",
+      "source_file": "posts-2026-02-21.json"
     }
   ],
-  "total_posted": 2
+  "total_posted": 3
 }
