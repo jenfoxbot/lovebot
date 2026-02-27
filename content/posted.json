@@ -47,7 +47,15 @@
       "pillar": "knowledge",
       "type": "reflection",
       "source_file": "posts-2026-02-21.json"
+    },
+    {
+      "id": "007",
+      "posted_date": "2026-02-27T14:37:27.779656+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mftwqm55rd2m",
+      "pillar": "care",
+      "type": "question",
+      "source_file": "posts-2026-02-21.json"
     }
   ],
-  "total_posted": 6
+  "total_posted": 7
 }
