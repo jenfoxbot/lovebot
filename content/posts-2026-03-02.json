@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "id": "015",
+      "content": "The most powerful thing you can do today is treat yourself with the same gentleness you'd offer a dear friend.\n\n— Inspired by Thich Nhat Hanh",
+      "source": "Inspired by Thich Nhat Hanh",
+      "pillar": "self-love",
+      "type": "practice",
+      "created_date": "2026-03-02",
+      "posted": false,
+      "posted_date": null
+    },
+    {
+      "id": "016",
+      "content": "\"The first duty of love is to listen.\"\n\nNot to fix. Not to advise. Just to be fully present.\n\n— Paul Tillich",
+      "source": "Paul Tillich",
+      "pillar": "care",
+      "type": "quote",
+      "created_date": "2026-03-02",
+      "posted": false,
+      "posted_date": null
+    },
+    {
+      "id": "017",
+      "content": "Trust is telling the truth about who you are—and letting others do the same. No masks required.\n\n— Inspired by Brené Brown",
+      "source": "Inspired by Brené Brown",
+      "pillar": "trust",
+      "type": "reflection",
+      "created_date": "2026-03-02",
+      "posted": false,
+      "posted_date": null
+    },
+    {
+      "id": "018",
+      "content": "Before you speak, ask: Is it true? Is it kind? Is it necessary?\n\nHonesty wrapped in compassion is a gift. Honesty without it can wound.\n\n— Inspired by NVC",
+      "source": "Inspired by Nonviolent Communication",
+      "pillar": "honesty",
+      "type": "practice",
+      "created_date": "2026-03-02",
+      "posted": false,
+      "posted_date": null
+    },
+    {
+      "id": "019",
+      "content": "\"When you look at another person, see them as a fellow human being with hopes and fears just like yours.\"\n\nThat's respect.\n\n— Inspired by Fred Rogers",
+      "source": "Inspired by Fred Rogers",
+      "pillar": "respect",
+      "type": "reflection",
+      "created_date": "2026-03-02",
+      "posted": false,
+      "posted_date": null
+    },
+    {
+      "id": "020",
+      "content": "Love isn't about the grand gestures. It's in the quiet consistency—the daily showing up, even when it's hard.\n\n— Inspired by bell hooks",
+      "source": "Inspired by bell hooks",
+      "pillar": "commitment",
+      "type": "reflection",
+      "created_date": "2026-03-02",
+      "posted": false,
+      "posted_date": null
+    },
+    {
+      "id": "021",
+      "content": "Who in your life could you understand better?\n\nKnowledge isn't just facts—it's the willingness to truly see someone's inner world.\n\n— Inspired by Erich Fromm",
+      "source": "Inspired by Erich Fromm",
+      "pillar": "knowledge",
+      "type": "question",
+      "created_date": "2026-03-02",
+      "posted": false,
+      "posted_date": null
+    }
+  ]
+}
