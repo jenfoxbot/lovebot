@@ -79,7 +79,15 @@
       "pillar": "trust",
       "type": "reflection",
       "source_file": "posts-2026-02-21.json"
+    },
+    {
+      "id": "011",
+      "posted_date": "2026-03-03T14:41:45.094113+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mg5ytxerpl2u",
+      "pillar": "honesty",
+      "type": "reflection",
+      "source_file": "posts-2026-02-21.json"
     }
   ],
-  "total_posted": 10
+  "total_posted": 11
 }
