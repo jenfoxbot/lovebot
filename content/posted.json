@@ -183,7 +183,15 @@
       "pillar": "self-love",
       "type": "reflection",
       "source_file": "posts-2026-03-16.json"
+    },
+    {
+      "id": "024",
+      "posted_date": "2026-03-17T14:53:51.129154+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mhba2iaxbh2n",
+      "pillar": "care",
+      "type": "question",
+      "source_file": "posts-2026-03-16.json"
     }
   ],
-  "total_posted": 23
+  "total_posted": 24
 }
