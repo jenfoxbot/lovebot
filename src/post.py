@@ -109,6 +109,33 @@ def get_bluesky_credentials() -> tuple[str, str]:
     return handle, password
 
 
+def build_post_text(post: dict) -> str:
+    """Build the final post text by appending hashtags to content.
+
+    Hashtags are stored in a separate ``hashtags`` list on each post and
+    appended after a blank line.  If adding all hashtags would exceed
+    Bluesky's 300-character limit, tags are dropped from the end until the
+    text fits.  If even a single tag won't fit, the post is sent without
+    hashtags.
+    """
+    content = post['content']
+    hashtags = post.get('hashtags', [])
+
+    if not hashtags:
+        return content
+
+    # Build the hashtag suffix progressively
+    while hashtags:
+        tag_str = ' '.join(f'#{tag}' if not tag.startswith('#') else tag for tag in hashtags)
+        candidate = f"{content}\n\n{tag_str}"
+        if len(candidate) <= 300:
+            return candidate
+        hashtags = hashtags[:-1]  # drop last tag and retry
+
+    # No tags fit — return content as-is
+    return content
+
+
 def post_to_bluesky(content: str) -> dict:
     """Post content to Bluesky and return the response."""
     handle, password = get_bluesky_credentials()
@@ -157,10 +184,14 @@ def print_status(all_posts: list, posted_data: dict) -> None:
         print("Run content generation to add more posts.")
     
     if unposted:
-        print(f"\nNext post (ID {unposted[0]['id']}):")
-        print(f"  Pillar: {unposted[0].get('pillar', 'N/A')}")
-        print(f"  Type: {unposted[0].get('type', 'N/A')}")
-        print(f"  Preview: {unposted[0]['content'][:80]}...")
+        next_p = unposted[0]
+        print(f"\nNext post (ID {next_p['id']}):")
+        print(f"  Pillar: {next_p.get('pillar', 'N/A')}")
+        print(f"  Type: {next_p.get('type', 'N/A')}")
+        hashtags = next_p.get('hashtags', [])
+        if hashtags:
+            print(f"  Hashtags: {' '.join('#' + t if not t.startswith('#') else t for t in hashtags)}")
+        print(f"  Preview: {next_p['content'][:80]}...")
 
 
 def main():
@@ -191,13 +222,19 @@ def main():
         print("   Add more posts to content/posts-YYYY-MM-DD.json")
         sys.exit(1)
     
+    # Build the final text (content + hashtags)
+    final_text = build_post_text(next_post)
+    hashtags = next_post.get('hashtags', [])
+
     print(f"\n📝 Next post (ID: {next_post['id']})")
     print(f"   Pillar: {next_post.get('pillar', 'N/A')}")
     print(f"   Type: {next_post.get('type', 'N/A')}")
-    print(f"   Characters: {len(next_post['content'])}")
+    print(f"   Characters: {len(final_text)}")
+    if hashtags:
+        print(f"   Hashtags: {' '.join('#' + t if not t.startswith('#') else t for t in hashtags)}")
     print(f"\n   Content:\n   {'-' * 40}")
-    # Print content with indentation
-    for line in next_post['content'].split('\n'):
+    # Print final text with indentation
+    for line in final_text.split('\n'):
         print(f"   {line}")
     print(f"   {'-' * 40}")
     
@@ -209,7 +246,7 @@ def main():
     # Post to Bluesky
     try:
         print("\n🚀 Posting to Bluesky...")
-        response = post_to_bluesky(next_post['content'])
+        response = post_to_bluesky(final_text)
         print(f"✅ Successfully posted!")
         print(f"   URI: {response.uri}")
         

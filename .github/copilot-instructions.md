@@ -39,12 +39,39 @@ Draw wisdom from these authors and works:
 
 ## Content Guidelines
 
-- **Maximum 280 characters** (strict limit for Bluesky)
+- **Maximum 300 characters** (Bluesky's hard limit; aim for ~260 for content to leave room for hashtags)
 - **Tone:** Warm, inclusive, hopeful — never preachy or judgmental
 - **Language:** Simple, clear, accessible — no jargon
 - **Attribution:** Include brief attribution when quoting directly
 - **Actionable:** When possible, give something to practice
 - **Balance:** Self-love AND love for others
+
+## Hashtag Guidelines
+
+Each post should include 2–3 hashtags in a separate `hashtags` field (without the `#` symbol). Hashtags are appended automatically at post time.
+
+### Broad Discovery Tags (pick 1 per post, rotate across the batch)
+Help people who need a pick-me-up or a reminder of love find us:
+- `DailyLove` — core brand identity
+- `SpreadLove` — community/movement
+- `LoveReminder` — random reminder vibe
+- `DailyInspiration` — broad reach
+
+### Pillar-Specific Tags (pick 1–2 per post)
+| Pillar | Tags |
+|--------|------|
+| self-love | `SelfLove`, `SelfCompassion` |
+| care | `Kindness`, `Compassion` |
+| responsibility | `LoveInAction`, `ShowUp` |
+| respect | `Respect`, `Empathy` |
+| trust | `Trust`, `Vulnerability` |
+| honesty | `Honesty`, `AuthenticLove` |
+| commitment | `Commitment`, `ShowUp` |
+| knowledge | `KnowYourself`, `MindfulLove` |
+
+### Content-Type Tags (optional)
+- `LoveQuotes` — for quote-type posts
+- `DailyPractice` — for practice-type posts
 
 ## Content Types
 
@@ -72,4 +99,4 @@ Draw wisdom from these authors and works:
 - Shaming or guilt-tripping
 - Relationship advice for specific situations
 - Mental health diagnoses or treatment advice
-- Content over 280 characters
+- Content over 300 characters

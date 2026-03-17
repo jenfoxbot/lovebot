@@ -46,13 +46,19 @@ Draw wisdom from these authors and works:
 - Erich Fromm — "The Art of Loving"
 
 **Content guidelines:**
-- Maximum 280 characters (strict limit)
+- Maximum 260 characters for content (Bluesky allows 300, but hashtags are appended separately at post time)
 - Warm, inclusive, hopeful tone
 - Never preachy or judgmental
 - Simple, clear language
 - When quoting directly, include brief attribution
 - Mix of: quotes, reflections, questions, and daily practices
 - Aim to inspire self-love AND love for others
+
+**Hashtag guidelines:**
+- Include a "hashtags" array with 2-3 tags (without #) in each post
+- Pick 1 broad discovery tag (rotate): DailyLove, SpreadLove, LoveReminder, DailyInspiration
+- Pick 1-2 pillar tags: SelfLove, SelfCompassion, Kindness, Compassion, LoveInAction, ShowUp, Respect, Empathy, Trust, Vulnerability, Honesty, AuthenticLove, Commitment, KnowYourself, MindfulLove
+- Optional content-type tag: LoveQuotes (for quotes), DailyPractice (for practices)
 
 **Generate 7 posts**, one for each day of the week, following this theme rotation:
 - Sunday: Self-Love
@@ -64,10 +70,11 @@ Draw wisdom from these authors and works:
 - Saturday: Knowledge
 
 For each post, provide:
-1. The post text (under 280 characters)
+1. The post text (under 260 characters — hashtags are appended separately)
 2. The pillar/theme
 3. The content type (quote/reflection/question/practice)
 4. Source inspiration (which author/work inspired it)
+5. 2-3 hashtags (1 broad discovery tag + 1-2 pillar-specific tags)
 ```
 
 ---
@@ -76,27 +83,27 @@ For each post, provide:
 
 ### For Quote-Heavy Week
 ```
-Generate 7 short quotes (under 280 characters each) about love from or inspired by bell hooks, M. Scott Peck, Mister Rogers, and Thich Nhat Hanh. Include attribution. Focus on love as action, not just feeling.
+Generate 7 short quotes (under 260 characters each) about love from or inspired by bell hooks, M. Scott Peck, Mister Rogers, and Thich Nhat Hanh. Include attribution. Focus on love as action, not just feeling. Include 2-3 hashtags per post.
 ```
 
 ### For Practice-Focused Week
 ```
-Generate 7 brief daily love practices (under 280 characters each). Each should give the reader something small but meaningful they can do TODAY to practice love—either self-love or love for others. Make them specific and actionable.
+Generate 7 brief daily love practices (under 260 characters each). Each should give the reader something small but meaningful they can do TODAY to practice love—either self-love or love for others. Make them specific and actionable. Include 2-3 hashtags per post.
 ```
 
 ### For Question/Reflection Week
 ```
-Generate 7 reflective questions about love (under 280 characters each). These should prompt self-examination without being intrusive. Focus on the seven pillars: care, responsibility, respect, trust, honesty, commitment, knowledge.
+Generate 7 reflective questions about love (under 260 characters each). These should prompt self-examination without being intrusive. Focus on the seven pillars: care, responsibility, respect, trust, honesty, commitment, knowledge. Include 2-3 hashtags per post.
 ```
 
 ### For Self-Love Focus
 ```
-Generate 7 posts about self-love (under 280 characters each). Draw from bell hooks' idea that we cannot give love we don't have for ourselves. Include a mix of quotes, affirmations, and practices. Warm and encouraging tone.
+Generate 7 posts about self-love (under 260 characters each). Draw from bell hooks' idea that we cannot give love we don't have for ourselves. Include a mix of quotes, affirmations, and practices. Warm and encouraging tone. Include 2-3 hashtags per post.
 ```
 
 ### For Combating Narcissism/Greed Theme
 ```
-Generate 7 posts (under 280 characters each) that gently contrast love with its opposites—greed, narcissism, exploitation—without being negative or preachy. Focus on what love IS rather than attacking what it isn't. Inspire the reader toward connection over consumption.
+Generate 7 posts (under 260 characters each) that gently contrast love with its opposites—greed, narcissism, exploitation—without being negative or preachy. Focus on what love IS rather than attacking what it isn't. Inspire the reader toward connection over consumption. Include 2-3 hashtags per post.
 ```
 
 ---
@@ -112,6 +119,7 @@ When the AI generates content, ask it to format like this for easy copying to po
   "source": "Inspired by bell hooks",
   "pillar": "care",
   "type": "reflection",
+  "hashtags": ["DailyLove", "Kindness", "Compassion"],
   "created_date": "2026-02-21",
   "posted": false,
   "posted_date": null
@@ -124,13 +132,14 @@ When the AI generates content, ask it to format like this for easy copying to po
 
 Before adding generated content to posts.json, verify each post:
 
-- [ ] Under 280 characters?
+- [ ] Under 260 characters (content only)?
 - [ ] Clear and easy to understand?
 - [ ] Warm, not preachy?
 - [ ] Aligned with the mission?
 - [ ] Would you want to read this?
 - [ ] Attribution included if it's a direct quote?
 - [ ] Unique ID assigned?
+- [ ] 2-3 relevant hashtags included?
 
 ---
 

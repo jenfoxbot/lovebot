@@ -6,6 +6,7 @@
       "source": "Inspired by Erich Fromm",
       "pillar": "knowledge",
       "type": "reflection",
+      "hashtags": ["DailyLove", "KnowYourself", "MindfulLove"],
       "created_date": "2026-03-16",
       "posted": false,
       "posted_date": null
@@ -16,6 +17,7 @@
       "source": "Inspired by bell hooks",
       "pillar": "self-love",
       "type": "reflection",
+      "hashtags": ["SpreadLove", "SelfLove", "SelfCompassion"],
       "created_date": "2026-03-16",
       "posted": false,
       "posted_date": null
@@ -26,6 +28,7 @@
       "source": "Inspired by M. Scott Peck",
       "pillar": "care",
       "type": "question",
+      "hashtags": ["LoveReminder", "Kindness", "Compassion"],
       "created_date": "2026-03-16",
       "posted": false,
       "posted_date": null
@@ -36,6 +39,7 @@
       "source": "Inspired by Brené Brown",
       "pillar": "trust",
       "type": "reflection",
+      "hashtags": ["DailyInspiration", "Trust", "Vulnerability"],
       "created_date": "2026-03-16",
       "posted": false,
       "posted_date": null
@@ -46,6 +50,7 @@
       "source": "Inspired by Thich Nhat Hanh",
       "pillar": "honesty",
       "type": "reflection",
+      "hashtags": ["DailyLove", "Honesty", "AuthenticLove"],
       "created_date": "2026-03-16",
       "posted": false,
       "posted_date": null
@@ -56,6 +61,7 @@
       "source": "Inspired by Marshall Rosenberg",
       "pillar": "respect",
       "type": "practice",
+      "hashtags": ["SpreadLove", "Respect", "DailyPractice"],
       "created_date": "2026-03-16",
       "posted": false,
       "posted_date": null
@@ -66,6 +72,7 @@
       "source": "M. Scott Peck",
       "pillar": "commitment",
       "type": "quote",
+      "hashtags": ["LoveReminder", "Commitment", "LoveQuotes"],
       "created_date": "2026-03-16",
       "posted": false,
       "posted_date": null
@@ -76,6 +83,7 @@
       "source": "Inspired by Erich Fromm",
       "pillar": "knowledge",
       "type": "question",
+      "hashtags": ["DailyInspiration", "KnowYourself", "MindfulLove"],
       "created_date": "2026-03-16",
       "posted": false,
       "posted_date": null
@@ -86,6 +94,7 @@
       "source": "C.S. Lewis",
       "pillar": "self-love",
       "type": "quote",
+      "hashtags": ["DailyLove", "SelfLove", "LoveQuotes"],
       "created_date": "2026-03-16",
       "posted": false,
       "posted_date": null
@@ -96,6 +105,7 @@
       "source": "Inspired by bell hooks",
       "pillar": "care",
       "type": "practice",
+      "hashtags": ["SpreadLove", "Kindness", "DailyPractice"],
       "created_date": "2026-03-16",
       "posted": false,
       "posted_date": null
@@ -106,6 +116,7 @@
       "source": "Inspired by Byron Katie",
       "pillar": "trust",
       "type": "reflection",
+      "hashtags": ["LoveReminder", "Trust", "Vulnerability"],
       "created_date": "2026-03-16",
       "posted": false,
       "posted_date": null
@@ -116,6 +127,7 @@
       "source": "Inspired by bell hooks",
       "pillar": "honesty",
       "type": "reflection",
+      "hashtags": ["DailyInspiration", "Honesty", "AuthenticLove"],
       "created_date": "2026-03-16",
       "posted": false,
       "posted_date": null
@@ -126,6 +138,7 @@
       "source": "Inspired by Erich Fromm",
       "pillar": "respect",
       "type": "question",
+      "hashtags": ["DailyLove", "Respect", "Empathy"],
       "created_date": "2026-03-16",
       "posted": false,
       "posted_date": null
@@ -136,6 +149,7 @@
       "source": "Inspired by M. Scott Peck",
       "pillar": "commitment",
       "type": "reflection",
+      "hashtags": ["SpreadLove", "Commitment", "ShowUp"],
       "created_date": "2026-03-16",
       "posted": false,
       "posted_date": null
