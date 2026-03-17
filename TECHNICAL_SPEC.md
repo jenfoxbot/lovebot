@@ -116,6 +116,7 @@ Each batch of posts is stored in a dated file (e.g., `posts-2026-02-21.json`).
       "source": "Inspired by M. Scott Peck",
       "pillar": "commitment",
       "type": "reflection",
+      "hashtags": ["DailyLove", "Commitment", "ShowUp"],
       "created_date": "2026-02-21",
       "posted": false,
       "posted_date": null
@@ -126,6 +127,7 @@ Each batch of posts is stored in a dated file (e.g., `posts-2026-02-21.json`).
       "source": "Fred Rogers",
       "pillar": "trust",
       "type": "quote",
+      "hashtags": ["LoveReminder", "Trust", "LoveQuotes"],
       "created_date": "2026-02-21",
       "posted": false,
       "posted_date": null
@@ -369,11 +371,33 @@ Copilot will automatically use the instructions in `.github/copilot-instructions
 ### Content Guidelines for AI Prompts
 
 When generating content, ensure:
-- **Length:** 280 characters max preferred (Bluesky allows 300)
+- **Length:** 260 characters max for content (hashtags appended separately)
 - **Tone:** Warm, inclusive, hopeful — not preachy
 - **Clarity:** Simple language, no jargon
 - **Actionable:** When possible, give something to practice
 - **Attribution:** Include source when quoting directly
+- **Hashtags:** Include 2-3 hashtags per post (see Hashtag Strategy below)
+
+### Hashtag Strategy
+
+Each post includes a `hashtags` array with 2-3 tags. At post time, `post.py` appends them as `\n\n#Tag1 #Tag2 #Tag3`. If the final text would exceed 300 chars, tags are progressively dropped.
+
+**Broad discovery tags** (1 per post, rotating):
+`DailyLove`, `SpreadLove`, `LoveReminder`, `DailyInspiration`
+
+**Pillar-specific tags** (1-2 per post):
+| Pillar | Tags |
+|--------|------|
+| self-love | `SelfLove`, `SelfCompassion` |
+| care | `Kindness`, `Compassion` |
+| responsibility | `LoveInAction`, `ShowUp` |
+| respect | `Respect`, `Empathy` |
+| trust | `Trust`, `Vulnerability` |
+| honesty | `Honesty`, `AuthenticLove` |
+| commitment | `Commitment`, `ShowUp` |
+| knowledge | `KnowYourself`, `MindfulLove` |
+
+**Content-type tags** (optional): `LoveQuotes`, `DailyPractice`
 
 ---
 
@@ -381,18 +405,20 @@ When generating content, ensure:
 
 Bluesky allows **300 characters** per post (graphemes, not bytes).
 
+Content text targets **260 characters** to leave room for hashtags, which are appended automatically at post time from the `hashtags` field. If adding hashtags would exceed 300 characters, they are progressively dropped.
+
 ### Good length examples:
 
 **Short (under 150 chars):**
 > Love isn't a feeling we fall into. It's a practice we rise to—one choice at a time.
 
-**Medium (150-250 chars):**
+**Medium (150-220 chars):**
 > "The purpose of loving is not to have our needs met but to extend ourselves." — M. Scott Peck
 
 > Today's practice: Before reacting, pause and ask—what would love do here?
 
-**Full (250-300 chars):**
-> Love requires seven things: care, responsibility, respect, trust, honesty, commitment, and knowledge. Not all at once, but as a practice. Today, choose one to focus on.
+**Full (220-260 chars):**
+> Love requires seven things: care, responsibility, respect, trust, honesty, commitment, and knowledge. Not all at once, but as a practice. Today, choose one.
 
 ---
 

@@ -32,16 +32,22 @@ For each post, output valid JSON in this exact format:
 
 {
   "id": "[3-digit number starting after the last ID in posts-*.json files]",
-  "content": "[post text with attribution at the end, max 280 characters total]",
+  "content": "[post text with attribution at the end, max 260 characters total]",
   "source": "[author or 'Original']",
   "pillar": "[pillar name]",
   "type": "[quote/reflection/question/practice]",
+  "hashtags": ["BroadTag", "PillarTag1", "PillarTag2"],
   "created_date": "[today's date YYYY-MM-DD]",
   "posted": false,
   "posted_date": null
 }
 
-IMPORTANT: The "content" field should include the source attribution at the end (e.g., "— Inspired by bell hooks" or "— Fred Rogers") because this is exactly what gets posted to Bluesky. Keep the total under 280 characters including the attribution.
+IMPORTANT: The "content" field should include the source attribution at the end (e.g., "— Inspired by bell hooks" or "— Fred Rogers") because this is exactly what gets posted to Bluesky. Keep the total under 260 characters including the attribution. Hashtags are appended separately at post time.
+
+HASHTAGS: Each post needs a "hashtags" array with 2-3 tags (no # symbol):
+- 1 broad discovery tag (rotate): DailyLove, SpreadLove, LoveReminder, DailyInspiration
+- 1-2 pillar tags: SelfLove, SelfCompassion, Kindness, Compassion, LoveInAction, ShowUp, Respect, Empathy, Trust, Vulnerability, Honesty, AuthenticLove, Commitment, KnowYourself, MindfulLove
+- Optional: LoveQuotes (for quotes), DailyPractice (for practices)
 
 Make each post unique, varied in type (mix quotes, reflections, questions, practices). Check the existing posts-*.json files to avoid duplicating themes or phrasing.
 ```
@@ -52,22 +58,22 @@ Make each post unique, varied in type (mix quotes, reflections, questions, pract
 
 ### Quote-Heavy Week
 ```
-@workspace Generate 7 LoveBot posts that are primarily direct quotes. Follow .github/copilot-instructions.md. Include quotes from bell hooks, M. Scott Peck, Fred Rogers, and Thich Nhat Hanh. Each under 280 characters with attribution. Output as JSON array matching the posts.json format.
+@workspace Generate 7 LoveBot posts that are primarily direct quotes. Follow .github/copilot-instructions.md. Include quotes from bell hooks, M. Scott Peck, Fred Rogers, and Thich Nhat Hanh. Each under 260 characters with attribution. Include 2-3 hashtags per post. Output as JSON array matching the posts.json format.
 ```
 
 ### Practice-Focused Week  
 ```
-@workspace Generate 7 LoveBot posts that are all actionable daily practices. Follow .github/copilot-instructions.md. Each should give readers something small but meaningful to DO today to practice love. Under 280 characters each. Output as JSON matching posts.json format.
+@workspace Generate 7 LoveBot posts that are all actionable daily practices. Follow .github/copilot-instructions.md. Each should give readers something small but meaningful to DO today to practice love. Under 260 characters each. Include 2-3 hashtags per post. Output as JSON matching posts.json format.
 ```
 
 ### Self-Love Focus
 ```
-@workspace Generate 7 LoveBot posts focused entirely on self-love and self-compassion. Follow .github/copilot-instructions.md. Draw from bell hooks' teaching that we cannot give love we don't have for ourselves. Mix of affirmations, practices, and reflections. Under 280 characters. JSON format.
+@workspace Generate 7 LoveBot posts focused entirely on self-love and self-compassion. Follow .github/copilot-instructions.md. Draw from bell hooks' teaching that we cannot give love we don't have for ourselves. Mix of affirmations, practices, and reflections. Under 260 characters. Include 2-3 hashtags. JSON format.
 ```
 
 ### Question/Reflection Week
 ```
-@workspace Generate 7 reflective questions about love for LoveBot. Follow .github/copilot-instructions.md. Each question should prompt gentle self-examination without being intrusive. Cover all seven pillars across the week. Under 280 characters. JSON format.
+@workspace Generate 7 reflective questions about love for LoveBot. Follow .github/copilot-instructions.md. Each question should prompt gentle self-examination without being intrusive. Cover all seven pillars across the week. Under 260 characters. Include 2-3 hashtags. JSON format.
 ```
 
 ---
@@ -75,10 +81,11 @@ Make each post unique, varied in type (mix quotes, reflections, questions, pract
 ## After Generation
 
 1. **Review each post:**
-   - Is it under 280 characters?
+   - Is it under 260 characters?
    - Does it feel authentic and warm?
    - Is it clear and accessible?
    - Would YOU want to read this?
+   - Does it have 2-3 relevant hashtags?
 
 2. **Edit as needed** — AI output is a starting point
 
