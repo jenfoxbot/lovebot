@@ -175,7 +175,15 @@
       "pillar": "knowledge",
       "type": "reflection",
       "source_file": "posts-2026-03-16.json"
+    },
+    {
+      "id": "023",
+      "posted_date": "2026-03-17T03:02:06.865344+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mh7ybsbezv27",
+      "pillar": "self-love",
+      "type": "reflection",
+      "source_file": "posts-2026-03-16.json"
     }
   ],
-  "total_posted": 22
+  "total_posted": 23
 }
