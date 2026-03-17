@@ -15,7 +15,8 @@ jobs:
     
     # Set permissions for the workflow
     permissions:
-      contents: write  # Needed to commit posted.json updates
+      contents: write   # Needed to commit posted.json and new posts files
+      models: read      # Needed for the low-buffer auto-generate safety net
     
     steps:
       - name: Checkout repository
@@ -38,12 +39,25 @@ jobs:
           BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
         run: python src/post.py
-      
-      - name: Commit posted.json update
+
+      # Safety net: if the buffer is running low, generate more content right now
+      # so tomorrow's post is never at risk. This runs *after* today's post so it
+      # doesn't slow down or block the actual posting step.
+      - name: Replenish content if buffer is low
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if ! python src/generate.py --check; then
+            echo "⚠️  Buffer is low — auto-generating a new batch now..."
+            python src/generate.py --count 14 --force
+          fi
+
+      - name: Commit updates
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add content/posted.json
+          # Stage posted.json AND any newly generated posts-*.json files
+          git add content/posted.json content/posts-*.json
           # Only commit if there are changes
-          git diff --staged --quiet || git commit -m "📝 Update posted.json after daily post [skip ci]"
+          git diff --staged --quiet || git commit -m "📝 Daily post update [skip ci]"
           git push
