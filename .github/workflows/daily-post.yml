@@ -9,6 +9,12 @@ on:
   # Allows manual trigger for testing
   workflow_dispatch:
 
+# Prevent two daily-post runs from committing simultaneously.
+# cancel-in-progress: false ensures a queued run still executes after the current one finishes.
+concurrency:
+  group: daily-post-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   post:
     runs-on: ubuntu-latest
@@ -60,4 +66,6 @@ jobs:
           git add content/posted.json content/posts-*.json
           # Only commit if there are changes
           git diff --staged --quiet || git commit -m "📝 Daily post update [skip ci]"
-          git push
+          # Pull any commits pushed by concurrent runs (e.g. auto-generate) then push cleanly.
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"

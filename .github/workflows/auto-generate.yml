@@ -20,6 +20,12 @@ on:
         required: false
         default: "false"
 
+# Serialize auto-generate runs so two concurrent triggers (e.g. a manual dispatch
+# while the scheduled run is in progress) don't both try to push to the same branch.
+concurrency:
+  group: auto-generate-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -65,5 +71,9 @@ jobs:
           git add content/posts-*.json
           git diff --staged --quiet \
             && echo "ℹ️  No new content to commit (buffer was already sufficient)." \
-            || git commit -m "🤖 Auto-generate content batch [skip ci]"
-          git push
+            || { \
+              git commit -m "🤖 Auto-generate content batch [skip ci]"; \
+              # Pull any commits pushed by concurrent runs before pushing cleanly.
+              git pull --rebase origin "${GITHUB_REF_NAME}"; \
+              git push origin HEAD:"${GITHUB_REF_NAME}"; \
+            }

@@ -49,15 +49,25 @@ LOW_CONTENT_THRESHOLD = 21
 # How many posts to generate per batch when triggered automatically.
 DEFAULT_COUNT = 14
 
-# Pillars cycle — matches the weekly theme rotation in copilot-instructions.md
+# Character limits.
+# LOVEBOT_TARGET_LIMIT is the project's preferred ceiling (from copilot-instructions.md).
+# BLUESKY_HARD_LIMIT is Bluesky's absolute cap — we never want to hit it.
+LOVEBOT_TARGET_LIMIT = 280
+BLUESKY_HARD_LIMIT = 300
+LOVEBOT_TRUNCATE_SUFFIX = "..."
+
+# Pillars cycle — self-love (Sunday theme) + all Seven Pillars of Love.
+# Kept as 8 entries so every pillar, including "responsibility", appears in
+# generated batches. The cycle does not need to align 1:1 with days of the week.
 PILLARS_CYCLE = [
-    "self-love",    # Sunday
-    "care",         # Monday
-    "trust",        # Tuesday
-    "honesty",      # Wednesday
-    "respect",      # Thursday
-    "commitment",   # Friday
-    "knowledge",    # Saturday
+    "self-love",      # Sunday theme (foundation of all love)
+    "care",           # Pillar 1
+    "responsibility", # Pillar 2
+    "respect",        # Pillar 3
+    "trust",          # Pillar 4
+    "honesty",        # Pillar 5
+    "commitment",     # Pillar 6
+    "knowledge",      # Pillar 7
 ]
 
 
@@ -122,7 +132,7 @@ def get_recent_themes(all_posts: list, n: int = 14) -> list[str]:
 def build_prompt(count: int, next_id: int, instructions: str, recent_themes: list[str]) -> str:
     today = datetime.now().strftime("%Y-%m-%d")
     pillar_list = "\n".join(
-        f"  Post {i + 1}: {PILLARS_CYCLE[i % 7]}"
+        f"  Post {i + 1}: {PILLARS_CYCLE[i % len(PILLARS_CYCLE)]}"
         for i in range(count)
     )
     recent_sample = "\n".join(f'  - "{t}"' for t in recent_themes[:10])
@@ -160,7 +170,7 @@ Return ONLY a raw JSON array — no markdown fences, no explanation.
 ]
 
 === HARD REQUIREMENTS ===
-- Each "content" field: 300 characters or fewer (Bluesky's strict limit — count carefully)
+- Each "content" field: {LOVEBOT_TARGET_LIMIT} characters or fewer (project limit; Bluesky's hard cap is {BLUESKY_HARD_LIMIT} — count carefully)
 - Attribution must be inside "content" (e.g., "— Inspired by bell hooks" or "— Thich Nhat Hanh")
 - Mix types across the batch: use a variety of quote, reflection, question, and practice
 - Tone: warm, inclusive, hopeful — never preachy, never guilt-tripping
@@ -231,6 +241,13 @@ def validate_posts(raw_posts: list, next_id: int) -> tuple[list, list]:
     required_fields = ["id", "content", "source", "pillar", "type", "created_date"]
 
     for i, post in enumerate(raw_posts):
+        # Guard against non-dict items (e.g. null or a bare string from the model)
+        if not isinstance(post, dict):
+            errors.append(
+                f"Post {i + 1}: expected a JSON object, got {type(post).__name__} — skipped"
+            )
+            continue
+
         # Check required fields
         missing = [f for f in required_fields if f not in post]
         if missing:
@@ -245,12 +262,15 @@ def validate_posts(raw_posts: list, next_id: int) -> tuple[list, list]:
             )
             post["id"] = expected_id
 
-        # Enforce character limit (truncate rather than discard)
-        if len(post["content"]) > 300:
+        # Enforce the project's preferred character limit (truncate rather than discard)
+        if len(post["content"]) > LOVEBOT_TARGET_LIMIT:
             errors.append(
                 f"Post {i + 1} (ID {post['id']}): content was {len(post['content'])} chars, truncated"
             )
-            post["content"] = post["content"][:297] + "..."
+            post["content"] = (
+                post["content"][: LOVEBOT_TARGET_LIMIT - len(LOVEBOT_TRUNCATE_SUFFIX)]
+                + LOVEBOT_TRUNCATE_SUFFIX
+            )
 
         # Ensure boolean/null defaults
         post.setdefault("posted", False)
