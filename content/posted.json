@@ -191,7 +191,15 @@
       "pillar": "care",
       "type": "question",
       "source_file": "posts-2026-03-16.json"
+    },
+    {
+      "id": "025",
+      "posted_date": "2026-03-18T15:00:23.840452+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mhdqv4acuo2n",
+      "pillar": "trust",
+      "type": "reflection",
+      "source_file": "posts-2026-03-16.json"
     }
   ],
-  "total_posted": 24
+  "total_posted": 25
 }
