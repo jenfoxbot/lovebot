@@ -223,7 +223,15 @@
       "pillar": "commitment",
       "type": "quote",
       "source_file": "posts-2026-03-16.json"
+    },
+    {
+      "id": "029",
+      "posted_date": "2026-03-22T14:26:09.309420+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mhnqtkpba72l",
+      "pillar": "knowledge",
+      "type": "question",
+      "source_file": "posts-2026-03-16.json"
     }
   ],
-  "total_posted": 28
+  "total_posted": 29
 }
