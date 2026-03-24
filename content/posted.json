@@ -239,7 +239,15 @@
       "pillar": "self-love",
       "type": "quote",
       "source_file": "posts-2026-03-16.json"
+    },
+    {
+      "id": "031",
+      "posted_date": "2026-03-24T14:55:58.413910+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mhstgpuanz27",
+      "pillar": "care",
+      "type": "practice",
+      "source_file": "posts-2026-03-16.json"
     }
   ],
-  "total_posted": 30
+  "total_posted": 31
 }
