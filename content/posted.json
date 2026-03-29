@@ -279,7 +279,15 @@
       "pillar": "commitment",
       "type": "reflection",
       "source_file": "posts-2026-03-16.json"
+    },
+    {
+      "id": "036",
+      "posted_date": "2026-03-29T14:32:04.471501+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mi7eglmmm42e",
+      "pillar": "self-love",
+      "type": "reflection",
+      "source_file": "posts-2026-03-17.json"
     }
   ],
-  "total_posted": 35
+  "total_posted": 36
 }
