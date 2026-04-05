@@ -335,7 +335,15 @@
       "pillar": "commitment",
       "type": "question",
       "source_file": "posts-2026-03-17.json"
+    },
+    {
+      "id": "043",
+      "posted_date": "2026-04-05T14:33:16.937692+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3miqxr6xwii2n",
+      "pillar": "knowledge",
+      "type": "practice",
+      "source_file": "posts-2026-03-17.json"
     }
   ],
-  "total_posted": 42
+  "total_posted": 43
 }
