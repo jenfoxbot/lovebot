@@ -391,7 +391,15 @@
       "pillar": "honesty",
       "type": "reflection",
       "source_file": "posts-2026-03-17.json"
+    },
+    {
+      "id": "050",
+      "posted_date": "2026-04-12T14:37:42.042966+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mjclbjz6lo22",
+      "pillar": "self-love",
+      "type": "reflection",
+      "source_file": "posts-2026-03-22.json"
     }
   ],
-  "total_posted": 49
+  "total_posted": 50
 }
