@@ -455,7 +455,15 @@
       "pillar": "knowledge",
       "type": "reflection",
       "source_file": "posts-2026-03-22.json"
+    },
+    {
+      "id": "058",
+      "posted_date": "2026-04-20T15:14:54.766793+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mjwr3gyn4s2x",
+      "pillar": "self-love",
+      "type": "question",
+      "source_file": "posts-2026-03-22.json"
     }
   ],
-  "total_posted": 57
+  "total_posted": 58
 }
