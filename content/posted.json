@@ -583,7 +583,15 @@
       "pillar": "care",
       "type": "practice",
       "source_file": "posts-2026-04-05.json"
+    },
+    {
+      "id": "074",
+      "posted_date": "2026-05-06T16:00:40.851037+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3ml733zawjw2o",
+      "pillar": "responsibility",
+      "type": "reflection",
+      "source_file": "posts-2026-04-05.json"
     }
   ],
-  "total_posted": 73
+  "total_posted": 74
 }
