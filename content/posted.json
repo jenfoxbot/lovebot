@@ -615,7 +615,15 @@
       "pillar": "honesty",
       "type": "question",
       "source_file": "posts-2026-04-05.json"
+    },
+    {
+      "id": "078",
+      "posted_date": "2026-05-10T14:50:12.199706+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mliyzody7s2c",
+      "pillar": "self-love",
+      "type": "practice",
+      "source_file": "posts-2026-04-19.json"
     }
   ],
-  "total_posted": 77
+  "total_posted": 78
 }
