@@ -639,7 +639,15 @@
       "pillar": "responsibility",
       "type": "practice",
       "source_file": "posts-2026-04-19.json"
+    },
+    {
+      "id": "081",
+      "posted_date": "2026-05-13T16:16:28.578741+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mlqpapcray2w",
+      "pillar": "respect",
+      "type": "practice",
+      "source_file": "posts-2026-04-19.json"
     }
   ],
-  "total_posted": 80
+  "total_posted": 81
 }
