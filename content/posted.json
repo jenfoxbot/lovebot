@@ -663,7 +663,15 @@
       "pillar": "honesty",
       "type": "reflection",
       "source_file": "posts-2026-04-19.json"
+    },
+    {
+      "id": "084",
+      "posted_date": "2026-05-16T14:54:08.986515+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mly42avrwt2t",
+      "pillar": "commitment",
+      "type": "reflection",
+      "source_file": "posts-2026-04-19.json"
     }
   ],
-  "total_posted": 83
+  "total_posted": 84
 }
