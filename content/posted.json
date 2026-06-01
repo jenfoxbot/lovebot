@@ -775,7 +775,15 @@
       "pillar": "honesty",
       "type": "question",
       "source_file": "posts-2026-05-03.json"
+    },
+    {
+      "id": "098",
+      "posted_date": "2026-06-01T19:19:04.549621+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mnascphnz22z",
+      "pillar": "commitment",
+      "type": "practice",
+      "source_file": "posts-2026-05-03.json"
     }
   ],
-  "total_posted": 97
+  "total_posted": 98
 }
