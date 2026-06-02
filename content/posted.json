@@ -783,7 +783,15 @@
       "pillar": "commitment",
       "type": "practice",
       "source_file": "posts-2026-05-03.json"
+    },
+    {
+      "id": "099",
+      "posted_date": "2026-06-02T18:03:35.405346+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mnd6knm3fw2e",
+      "pillar": "knowledge",
+      "type": "practice",
+      "source_file": "posts-2026-05-03.json"
     }
   ],
-  "total_posted": 98
+  "total_posted": 99
 }
