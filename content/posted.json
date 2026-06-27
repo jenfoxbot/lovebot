@@ -983,7 +983,15 @@
       "pillar": "respect",
       "type": "practice",
       "source_file": "posts-2026-06-02.json"
+    },
+    {
+      "id": "124",
+      "posted_date": "2026-06-27T15:13:10.751993+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mpbqox57xp2o",
+      "pillar": "trust",
+      "type": "practice",
+      "source_file": "posts-2026-06-02.json"
     }
   ],
-  "total_posted": 123
+  "total_posted": 124
 }
