@@ -999,7 +999,15 @@
       "pillar": "honesty",
       "type": "practice",
       "source_file": "posts-2026-06-02.json"
+    },
+    {
+      "id": "126",
+      "posted_date": "2026-06-29T16:51:30.980208+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mpgx4mxtgs2o",
+      "pillar": "commitment",
+      "type": "practice",
+      "source_file": "posts-2026-06-02.json"
     }
   ],
-  "total_posted": 125
+  "total_posted": 126
 }
