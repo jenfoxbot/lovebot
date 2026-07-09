@@ -1079,7 +1079,15 @@
       "pillar": "care",
       "type": "practice",
       "source_file": "posts-2026-06-16.json"
+    },
+    {
+      "id": "136",
+      "posted_date": "2026-07-09T16:25:15.550579+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mqa2cv4qgu25",
+      "pillar": "responsibility",
+      "type": "question",
+      "source_file": "posts-2026-06-16.json"
     }
   ],
-  "total_posted": 135
+  "total_posted": 136
 }
