@@ -1087,7 +1087,15 @@
       "pillar": "responsibility",
       "type": "question",
       "source_file": "posts-2026-06-16.json"
+    },
+    {
+      "id": "137",
+      "posted_date": "2026-07-10T16:23:03.244847+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mqcknufooa2d",
+      "pillar": "respect",
+      "type": "reflection",
+      "source_file": "posts-2026-06-16.json"
     }
   ],
-  "total_posted": 136
+  "total_posted": 137
 }
