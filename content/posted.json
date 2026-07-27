@@ -1223,7 +1223,15 @@
       "pillar": "honesty",
       "type": "practice",
       "source_file": "posts-2026-06-30.json"
+    },
+    {
+      "id": "154",
+      "posted_date": "2026-07-27T16:14:48.118496+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3mrnc4r3e7e2j",
+      "pillar": "commitment",
+      "type": "reflection",
+      "source_file": "posts-2026-06-30.json"
     }
   ],
-  "total_posted": 153
+  "total_posted": 154
 }
