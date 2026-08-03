@@ -1279,7 +1279,15 @@
       "pillar": "trust",
       "type": "practice",
       "source_file": "posts-2026-06-30.json"
+    },
+    {
+      "id": "161",
+      "posted_date": "2026-08-03T16:21:03.899277+00:00",
+      "bluesky_uri": "at://did:plc:mfbt5kmhvwmgaostnfap4kat/app.bsky.feed.post/3ms6vqfocc52b",
+      "pillar": "honesty",
+      "type": "practice",
+      "source_file": "posts-2026-06-30.json"
     }
   ],
-  "total_posted": 160
+  "total_posted": 161
 }
